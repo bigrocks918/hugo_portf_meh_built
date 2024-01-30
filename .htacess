@@ -1,0 +1,11 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www.bigrocks918.com [NC]
+RewriteRule ^(.*)$ http://bigrocks918.com/ [L,R=301]
+
+apache
+<IfModule mod_headers.c>
+    <FilesMatch ".*">
+        Header set Access-Control-Allow-Origin "*"
+	Header set Access-Control-Allow-Methods "GET"
+    </FilesMatch>
+</IfModule>
